@@ -1,0 +1,3 @@
+{% for user in users %}
+    <p><a href="{% url'user_detail',user_id=user.id %}" > {{user.attendee_name }} </a></p>
+{%endfor%}

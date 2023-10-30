@@ -1,0 +1,15 @@
+<h1> Event Registration </h1>
+<form method="POST" action="{% url 'event_registration' %}">
+    {% crsf_token %}
+    <label for="attendee_name">Your Name: </label>
+    <input type="text" id="attendee_name" name="attendee_name" required><br><br>
+    <label for="attendee_email"> Your Email: </label>
+    <input type="email" id="attendee_email" name="attendee_email" required><br><br>
+    <label for="event_id"> Select event: </label>
+    <select id="event_id" name="event_id">
+        {%for event in events %}
+        <option value="{{ event.id }}">{{ event.title}}</option>
+        {% endfor %}}
+    </select><br><br>
+    <input type="submit" value="Register">
+</form>
