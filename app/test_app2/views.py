@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Event, RegistrationForm
+from .models import Item, RegistrationForm
 
 
 
@@ -25,5 +25,5 @@ def event_registration(request):
             return HttpResponse('Регистрация успешно завершена!')
     else:
         form = RegistrationForm()
-        events = Event.objects.filter(registration_open=True)
-        return render(request, 'registration_app/event_registration.html', {'form': form, 'events': events})
+        events = Item.objects.filter(registration_open=True)
+        return render(request, 'test_app2/event_registration.html', {'form': form, 'events': events})

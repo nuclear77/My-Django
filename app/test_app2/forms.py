@@ -1,7 +1,8 @@
 from django import forms
-from .models import Event
+from .models import Item
 
-class RegistrationForm(forms.Form):
-    attendee_name = forms.CharField(label='Your Name', max_length=100)
-    attendee_email = forms.EmailField(label='Your Email')
-    event = forms.ModelChoiceField(queryset=Event.objects.filter(registration_open=True), label='Select Event')
+class ItemFrom(forms.ModelForm):
+
+    class Meta:
+        model = Item
+        fields = ['name', 'description']

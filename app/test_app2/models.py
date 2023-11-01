@@ -2,7 +2,7 @@ from django.db import models
 from django import forms
 
 
-class Event(models.Model):
+class Item (models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     start_date = models.DateTimeField()
@@ -18,5 +18,5 @@ class Event(models.Model):
 class RegistrationForm(forms.Form):
     attendee_name = forms.CharField(max_length=100)
     attendee_email = forms.EmailField()
-    event = forms.ModelChoiceField(queryset=Event.objects.filter(registration_open=True))
+    event = forms.ModelChoiceField(queryset=Item.objects.filter(registration_open=True))
 # Create your models here.
