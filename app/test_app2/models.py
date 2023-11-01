@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 
 class Event(models.Model):
@@ -14,9 +15,8 @@ class Event(models.Model):
         return self.title
 
 
-class Registration(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE)
-    attendees_name = models.CharField(max_length=100)
-    attendees_email = models.EmailField()
-    registration_date = models.DateTimeField(auto_now_add=True)
+class RegistrationForm(forms.Form):
+    attendee_name = forms.CharField(max_length=100)
+    attendee_email = forms.EmailField()
+    event = forms.ModelChoiceField(queryset=Event.objects.filter(registration_open=True))
 # Create your models here.

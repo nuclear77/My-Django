@@ -10,7 +10,7 @@ def about(request):
     return HttpResponse('<h1>2 страница</h1>')
 
 
-def negr(request):
+def logo(request):
     return HttpResponse('<h1>3 страница</h1>')
 
 
