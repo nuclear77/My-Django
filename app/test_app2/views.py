@@ -1,6 +1,13 @@
 from django.shortcuts import render
 from .models import Item, RegistrationForm
+from .forms import UserForm
 
+def index(request):
+    userform = UserForm()
+    return render(request, "index.html", {"form": userform})
+def siterose(request):
+    userform = UserForm()
+    return render(request, "rose.html", {"form": userform})
 
 
 def user_list(request):

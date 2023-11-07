@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Моя страница</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="column">
+        <h1>реклама</h1>
+        <!-- Здесь может быть ваш контент для рекламы -->
+    </div>
+    <div class="column">
+        <img src="{% static 'images/rectangle.png' %}" alt="Rectangle" width="200" height="140">
+        <div class="button-container">
+            <button class="rounded-button">Букеты</button>
+            <button class="rounded-button">О нас</button>
+            <button class="rounded-button">Доставка</button>
+            <button class="rounded-button">Оформить заказ</button>
+        </div>
+        <div class="popular">Популярное</div>
+        <div class="line"></div>
+        <div class="button-container">
+            <div class="column-buttons">
+                <button class="button"> Розы</button>
+                <button class="button"> Ромашки</button>
+                <button class="button"> На свадьбу</button>
+                <button class="button"> На поминки</button>
+                <button class="button"> Веночки</button>
+                <button class="button">Искусственные</button>
+                <button class="button"> Живые</button>
+                <button class="button"> Букеты</button>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="line1"></div>
+        <div class="frames-container">
+            <div class="frame">
+                <h2>101 роза</h2>
+                <div class="image-container">
+                    <img src="{% static 'images/101rose.png' %}" alt="101 роза" width="150" height="150">
+                </div>
+                <p>Цена: 100 руб.</p>
+            </div>
+            <div class="frame">
+                <h2>51 роза</h2>
+                <div class="image-container">
+                    <img src="{% static 'images/51rose.png' %}" alt="51 роза" width="150" height="150">
+                </div>
+                <p>Цена: 50 руб.</p>
+            </div>
+            <div class="frame">
+                <h2>11 роз</h2>
+                <div class="image-container">
+                    <img src="{% static 'images/11rose.png' %}" alt="11 роз" width="150" height="150">
+                </div>
+                <p>Цена: 10 руб.</p>
+            </div>
+        </div>
+        <h1>Лицензия ОАО Пупкин</h1>
+        <h1>Номер ИП: 142951342</h1>
+    </div>
+
+    <div class="column">
+        <h1>реклама</h1>
+        <!-- Здесь может быть ваш контент для рекламы -->
+    </div>
+</div>
+</body>
+</html>

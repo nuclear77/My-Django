@@ -20,3 +20,4 @@ class RegistrationForm(forms.Form):
     attendee_email = forms.EmailField()
     event = forms.ModelChoiceField(queryset=Item.objects.filter(registration_open=True))
 # Create your models here.
+

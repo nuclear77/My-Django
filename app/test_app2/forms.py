@@ -5,4 +5,8 @@ class ItemFrom(forms.ModelForm):
 
     class Meta:
         model = Item
-        fields = ['name', 'email', 'event']
+        fields = ['title']
+
+class UserForm(forms.Form):
+    name = forms.CharField()
+    age = forms.IntegerField()
