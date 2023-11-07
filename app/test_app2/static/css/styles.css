@@ -12,14 +12,14 @@ html, body {
 
 .column {
     padding: 100px;
-    background-color: lightgray;
+    background-color: lightcyan;
     height: 100%;
     overflow: auto;
 }
 
 .column:first-child,
 .column:last-child {
-    background-color: lightblue;
+    background-color: lightsalmon;
 }
 
 .column:nth-child(2) {
@@ -75,7 +75,7 @@ html, body {
     margin-right: 15px;
     margin-top: 0;
     border: none;
-    background-color: lightblue;
+    background-color: chocolate;
     color: white;
     text-align: center;
     border-radius: 20px;
@@ -90,7 +90,7 @@ html, body {
 }
 
 .column:nth-child(2) .rounded-button:hover {
-    background-color: deepskyblue;
+    background-color: saddlebrown;
 }
 
 .column-buttons {
@@ -101,6 +101,7 @@ html, body {
 }
 
 .button {
+    background-color: darkorange;
     margin-left: -635px;
     margin-bottom: 5px;
     width: 200px; /* Установите фиксированную ширину кнопок */
@@ -129,7 +130,7 @@ html, body {
 .frame {
     width: 200px;
     height: 250px;
-    border: 2px solid black;
+    border: 2px solid darkred;
     margin: 10px;
     margin-top: -340px;
     margin-right: 40px;
@@ -138,7 +139,7 @@ html, body {
     position: relative;
     width: 130px;
     height: 130px;
-    border: 2px solid rebeccapurple;
+    border: 3px solid mediumvioletred;
     margin: 20px;
     overflow: hidden;
 }
