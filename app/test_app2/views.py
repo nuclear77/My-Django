@@ -28,8 +28,8 @@ def event_registration(request):
             attendee_email = form.cleaned_data['attendee_email']
             event = form.cleaned_data['event']
             registration = RegistrationForm.objects.create(event=event, attendee_name=attendee_name, attendee_email=attendee_email)
-            return render(request, 'test_app2/event_registration.html', {'form': form, 'events': event})
+            return render(request, 'event_registration.html', {'form': form, 'events': event})
     else:
         form = RegistrationForm()
         events = Item.objects.filter(registration_open=True)
-        return render(request, 'test_app2/event_registration.html', {'form': form, 'events': events})
+        return render(request, 'event_registration.html', {'form': form, 'events': events})
