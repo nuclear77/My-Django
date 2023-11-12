@@ -3,7 +3,6 @@ from .models import Item
 
 admin.site.register(Item)
 
-
 from .models import Image
 
 admin.site.register(Image)
