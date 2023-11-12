@@ -40,21 +40,33 @@
             <div class="frame">
                 <h2>101 роза</h2>
                 <div class="image-container">
-                    <img src="{% static 'images/101rose.png' %}" alt="101 роза" width="150" height="150">
+                    {% for image in images %}
+                    <a href="{% url 'image_detail' image.id %}">
+                        <img src="{{ image.image.url }}" alt="{{ image.title }}" width="150" height="150">
+                    </a>
+                    {% endfor %}
                 </div>
                 <p>Цена: 100 руб.</p>
             </div>
             <div class="frame">
                 <h2>51 роза</h2>
                 <div class="image-container">
-                    <img src="{% static 'images/51rose.png' %}" alt="51 роза" width="150" height="150">
+                    {% for image in images %}
+                    <a href="{% url 'image_detail' image.id %}">
+                        <img src="{{ image.image.url }}" alt="{{ image.title }}" width="150" height="150">
+                    </a>
+                    {% endfor %}
                 </div>
                 <p>Цена: 50 руб.</p>
             </div>
             <div class="frame">
                 <h2>11 роз</h2>
                 <div class="image-container">
-                    <img src="{% static 'images/11rose.png' %}" alt="11 роз" width="150" height="150">
+                    {% for image in images %}
+                    <a href="{% url 'image_detail' image.id %}">
+                        <img src="{{ image.image.url }}" alt="{{ image.title }}" width="150" height="150">
+                    </a>
+                    {% endfor %}
                 </div>
                 <p>Цена: 10 руб.</p>
             </div>

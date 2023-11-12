@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from .models import Item, RegistrationForm
 from .forms import UserForm
+from django.shortcuts import render, get_object_or_404
+from .models import Image
 
-def index(request):
-    userform = UserForm()
-    return render(request, "index.html", {"form": userform})
+
 def siterose(request):
     userform = UserForm()
     return render(request, "rose.html", {"form": userform})
@@ -33,3 +33,9 @@ def event_registration(request):
         form = RegistrationForm()
         events = Item.objects.filter(registration_open=True)
         return render(request, 'test_app2/event_registration.html', {'form': form, 'events': events})
+
+
+
+def image_detail(request, image_id):
+    image = get_object_or_404(Image, id=image_id)
+    return render(request, 'image_detail.html', {'image': image})

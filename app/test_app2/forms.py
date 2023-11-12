@@ -10,3 +10,5 @@ class ItemFrom(forms.ModelForm):
 class UserForm(forms.Form):
     name = forms.CharField()
     age = forms.IntegerField()
+
+

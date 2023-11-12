@@ -21,3 +21,10 @@ class RegistrationForm(forms.Form):
     event = forms.ModelChoiceField(queryset=Item.objects.filter(registration_open=True))
 # Create your models here.
 
+class Image(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='images/')
+    price = models.DecimalField(max_digits=8, decimal_places=2)
+
+    def __str__(self):
+        return self.title

@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Подробности изображения</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="image-detail-container">
+        <img src="{{ image.image.url }}" alt="{{ image.title }}">
+        <h2>{{ image.title }}</h2>
+        <p>Цена: {{ image.price }} руб.</p>
+    </div>
+</body>
+</html>
