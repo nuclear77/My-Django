@@ -66,6 +66,7 @@ html, body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .column:nth-child(2) .rounded-button {
